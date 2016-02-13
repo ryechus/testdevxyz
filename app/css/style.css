@@ -501,12 +501,17 @@ body {
 input {
   padding: 6px 10px; }
 
+button {
+  background-color: #f69679;
+  font-weight: 100; }
+
 input, button {
   height: 40px;
-  border: 0px; }
+  border: 0px;
+  outline: none; }
 
 section {
-  height: 100vw; }
+  height: 100vh; }
 
 nav div[class*='column-'] {
   text-transform: uppercase; }
@@ -514,34 +519,64 @@ nav div[class*='column-'] {
 header {
   border-bottom: 1px groove #ed5968; }
 
+footer {
+  height: 130px; }
+  footer .copyright {
+    font-size: 12px; }
+  footer ul {
+    list-style: none; }
+    footer ul li {
+      font-size: 12px;
+      float: right;
+      margin-left: 17px; }
+
+.header-logo {
+  width: 220px;
+  height: 36px;
+  background-repeat: no-repeat;
+  background-image: url("imgs/devtest-whitelogo.svg"); }
+
+.header-logo.dark_bg {
+  background-image: url("imgs/devtest-darklogo.svg"); }
+
 #top {
   background: #e15260; }
   #top .header {
     height: 100px;
     padding: 32px 0px;
     font-size: 22px; }
-    #top .header-logo {
-      width: 220px;
-      height: 36px;
-      background-repeat: no-repeat;
-      background-image: url("imgs/devtest-whitelogo.svg"); }
+
+#bottom {
+  color: #3d3d42; }
+
+#main .content {
+  height: 400px; }
 
 .search-group {
   float: right;
   width: 340px; }
   .search-group input {
     width: 280px;
-    outline: none;
     font-size: 10px;
     color: black; }
   .search-group button {
-    background-color: #f69679;
     width: 60px;
     outline: none;
     float: right; }
 
+.tron {
+  height: inherit;
+  display: table;
+  font-size: 23px;
+  text-transform: none; }
+  .tron h1 {
+    display: table-cell;
+    vertical-align: middle;
+    width: 438px;
+    text-transform: none; }
+
 .form-box {
-  height: 400px;
+  height: inherit;
   width: 380px;
   background: #e1e1e1;
   float: right;
@@ -551,6 +586,8 @@ header {
     text-align: center;
     color: #5a5a5a;
     font-weight: 100; }
+  .form-box-inputs {
+    margin-top: 55px; }
   .form-box input {
     width: 100%; }
   .form-box label {
@@ -558,3 +595,48 @@ header {
     font-size: 12px;
     margin-bottom: 3px;
     text-transform: uppercase; }
+  .form-box .input-group, .form-box .input-group-submit {
+    padding: 0px 5px; }
+    .form-box .input-group button, .form-box .input-group-submit button {
+      width: 100%;
+      text-align: left;
+      padding: 0px 10px; }
+      .form-box .input-group button .icon-right-open, .form-box .input-group-submit button .icon-right-open {
+        float: right; }
+
+.thin {
+  font-weight: 100; }
+
+.sandy_brown, #bottom h1, #bottom h2, #bottom h3, #bottom h4, #bottom h5, #bottom h6 {
+  color: #f69679; }
+
+.sandy_brown-bg {
+  background-color: #f69679; }
+
+.caps {
+  text-transform: uppercase; }
+
+.light_grey-bg {
+  background-color: #cacaca; }
+
+.dark_placeholder ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #3d3d42; }
+
+.dark_placeholder :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #3d3d42;
+  opacity: 1; }
+
+.dark_placeholder ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #3d3d42;
+  opacity: 1; }
+
+.dark_placeholder :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #3d3d42; }
+
+.dark_placeholder :placeholder-shown {
+  /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color: #3d3d42; }

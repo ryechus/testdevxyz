@@ -3,6 +3,8 @@
 @import 'dev-xyz/devtestxyz-embedded.scss';
 @import 'components/grid.scss';
 
+$sandy_brown: #f69679;
+
 html {
   font-family: 'Open Sans', sans-serif;
 }
@@ -15,13 +17,19 @@ input {
   padding: 6px 10px;
 }
 
+button {
+  background-color: $sandy_brown;
+  font-weight: 100;
+}
+
 input, button {
   height: 40px;
   border: 0px;
+  outline: none;
 }
 
 section {
-    height: 100vw;
+    height: 100vh;
 }
 
 nav {
@@ -35,6 +43,35 @@ header {
   border-bottom: 1px groove #ed5968;
 }
 
+footer {
+  height: 130px;
+
+  .copyright {
+    font-size: 12px;
+  }
+
+  ul {
+      list-style: none;
+
+      li {
+        font-size: 12px;
+        float: right;
+        margin-left: 17px;
+      }
+  }
+}
+
+.header-logo {
+  width: 220px;
+  height: 36px;
+  background-repeat: no-repeat;
+  background-image: url('imgs/devtest-whitelogo.svg');
+}
+
+.header-logo.dark_bg {
+  background-image: url('imgs/devtest-darklogo.svg');
+}
+
 #top {
     background: #e15260;
 
@@ -42,14 +79,20 @@ header {
       height: 100px;
       padding: 32px 0px;
       font-size: 22px;
-
-      &-logo {
-        width: 220px;
-        height: 36px;
-        background-repeat: no-repeat;
-        background-image: url('imgs/devtest-whitelogo.svg');
-      }
     }
+}
+
+#bottom {
+  color: #3d3d42;
+  h1, h2, h3, h4, h5, h6 {
+    @extend .sandy_brown;
+  }
+}
+
+#main {
+  .content {
+    height: 400px;
+  }
 }
 
 .search-group {
@@ -57,20 +100,32 @@ header {
   width: 340px;
   input {
     width: 280px;
-    outline: none;
     font-size: 10px;
     color: black;
   }
   button {
-    background-color: #f69679;
     width: 60px;
     outline: none;
     float: right;
   }
 }
 
+.tron {
+  height: inherit;
+  display: table;
+  font-size: 23px;
+  text-transform: none;
+
+  h1 {
+    display: table-cell;
+    vertical-align: middle;
+    width: 438px;
+    text-transform: none;
+  }
+}
+
 .form-box {
-  height: 400px;
+  height: inherit;
   width: 380px;
   background: #e1e1e1;
   float:right;
@@ -81,6 +136,10 @@ header {
     text-align: center;
     color: #5a5a5a;
     font-weight: 100;
+  }
+
+  &-inputs {
+    margin-top: 55px;
   }
 
   input {
@@ -94,7 +153,56 @@ header {
     text-transform: uppercase;
   }
 
-  .input-group {
-    
+  .input-group, .input-group-submit {
+    padding: 0px 5px;
+    button {
+      width: 100%;
+      text-align: left;
+      padding: 0px 10px;
+      .icon-right-open {
+        float: right;
+      }
+    }
+  }
+}
+
+// Helper classes
+.thin {
+  font-weight: 100;
+}
+
+.sandy_brown {
+  color: $sandy_brown;
+}
+
+.sandy_brown-bg {
+  background-color: $sandy_brown;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.light_grey-bg {
+  background-color: #cacaca;
+}
+
+.dark_placeholder {
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #3d3d42;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #3d3d42;
+   opacity:  1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #3d3d42;
+   opacity:  1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #3d3d42;
+  }
+  :placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color:    #3d3d42;
   }
 }
