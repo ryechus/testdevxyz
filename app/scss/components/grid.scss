@@ -1,0 +1,54 @@
+$columns: 15;
+.container {
+  width: 64vw;
+  margin: 0px auto;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto !important;
+}
+
+.container:after,
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[class*='column-'] {
+  float: left;
+  padding: 1em 0em;
+  width: 100%;
+  min-height: 1px;
+}
+
+.column-half {
+  float: left;
+  padding: 1em 0em;
+  width: 50%;
+  min-height: 1px;
+}
+
+@media only screen and (min-width: 30em) {
+  .container {
+    width: 95%;
+    max-width: 65em;
+  }
+  @for $i from 1 through $columns {
+    .column-#{$i} {
+      width: (100% / $columns) * $i;
+    }
+  }
+}

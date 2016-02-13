@@ -5,6 +5,8 @@
     "requirejs": "latest",
     "jquery": "latest",
     "backbone-amd": "latest",
-    "underscore-amd": "latest"
+    "underscore-amd": "latest",
+    "require-handlebars-plugin": "SlexAxton/require-handlebars-plugin#^1.0.0",
+    "modernize": "^0.1.0"
   }
 }

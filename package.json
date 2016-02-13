@@ -1,0 +1,21 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "description": "test",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "''"
+  },
+  "author": "Michael Hardin",
+  "license": "ISC"
+}

@@ -1,0 +1,100 @@
+/* Feel free to use @import. r.js will merge them, when building */
+@import '../scripts/vendor/modernize/modernize.scss';
+@import 'dev-xyz/devtestxyz-embedded.scss';
+@import 'components/grid.scss';
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    color: #FFF;
+}
+
+input {
+  padding: 6px 10px;
+}
+
+input, button {
+  height: 40px;
+  border: 0px;
+}
+
+section {
+    height: 100vw;
+}
+
+nav {
+  div[class*='column-'] {
+    text-transform: uppercase;
+    // text-align: center;
+  }
+}
+
+header {
+  border-bottom: 1px groove #ed5968;
+}
+
+#top {
+    background: #e15260;
+
+    .header {
+      height: 100px;
+      padding: 32px 0px;
+      font-size: 22px;
+
+      &-logo {
+        width: 220px;
+        height: 36px;
+        background-repeat: no-repeat;
+        background-image: url('imgs/devtest-whitelogo.svg');
+      }
+    }
+}
+
+.search-group {
+  float:right;
+  width: 340px;
+  input {
+    width: 280px;
+    outline: none;
+    font-size: 10px;
+    color: black;
+  }
+  button {
+    background-color: #f69679;
+    width: 60px;
+    outline: none;
+    float: right;
+  }
+}
+
+.form-box {
+  height: 400px;
+  width: 380px;
+  background: #e1e1e1;
+  float:right;
+  border-radius: 3px;
+  padding: 20px 10px;
+
+  &-header {
+    text-align: center;
+    color: #5a5a5a;
+    font-weight: 100;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  label {
+    color: #4c536a;
+    font-size: 12px;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+  }
+
+  .input-group {
+    
+  }
+}
