@@ -417,7 +417,7 @@ fieldset {
   content: '\35'; }
 
 /* '5' */
-.icon-down-open:before {
+.icon-down-open:before, select:before {
   content: '\36'; }
 
 /* '6' */
@@ -498,14 +498,35 @@ html {
 body {
   color: #FFF; }
 
-input {
+input, select {
   padding: 6px 10px; }
+  input.error, select.error {
+    border: 1px solid red; }
+
+select {
+  border-radius: 0px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  color: #3d3d42; }
+
+.dropdown {
+  position: relative; }
+  .dropdown i {
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    bottom: 0px;
+    right: 0px; }
 
 button {
   background-color: #f69679;
   font-weight: 100; }
 
-input, button {
+input, button, select {
   height: 40px;
   border: 0px;
   outline: none; }
@@ -540,7 +561,7 @@ footer {
   background-image: url("imgs/devtest-darklogo.svg"); }
 
 #top {
-  background: #e15260; }
+  background-image: radial-gradient(ellipse farthest-corner at 50% 136%, #f97983 20%, #e15260 34%); }
   #top .header {
     height: 100px;
     padding: 32px 0px;
@@ -549,8 +570,10 @@ footer {
 #bottom {
   color: #3d3d42; }
 
-#main .content {
-  height: 400px; }
+#main {
+  margin-top: 65px; }
+  #main .content {
+    height: 400px; }
 
 .search-group {
   float: right;
@@ -589,7 +612,8 @@ footer {
   .form-box-inputs {
     margin-top: 55px; }
   .form-box input {
-    width: 100%; }
+    width: 100%;
+    color: #3d3d42; }
   .form-box label {
     color: #4c536a;
     font-size: 12px;
@@ -610,7 +634,7 @@ footer {
 .sandy_brown, #bottom h1, #bottom h2, #bottom h3, #bottom h4, #bottom h5, #bottom h6 {
   color: #f69679; }
 
-.sandy_brown-bg {
+.sandy_brown-bg, .dropdown i {
   background-color: #f69679; }
 
 .caps {
@@ -618,25 +642,3 @@ footer {
 
 .light_grey-bg {
   background-color: #cacaca; }
-
-.dark_placeholder ::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: #3d3d42; }
-
-.dark_placeholder :-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #3d3d42;
-  opacity: 1; }
-
-.dark_placeholder ::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #3d3d42;
-  opacity: 1; }
-
-.dark_placeholder :-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #3d3d42; }
-
-.dark_placeholder :placeholder-shown {
-  /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
-  color: #3d3d42; }

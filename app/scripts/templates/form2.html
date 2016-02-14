@@ -1,0 +1,24 @@
+{{#each models }}
+{{#with attributes}}
+<div class="column-half">
+  <div class="input-group">
+    <label>{{ label }}</label>
+    {{#if date_input}}
+      {{> templates/ui/date-input }}
+    {{/if}}
+    {{#if phone_input}}
+      {{> templates/ui/phone-input }}
+    {{/if}}
+    {{#if number_input}}
+      {{> templates/ui/default-input type="number" }}
+    {{/if}}
+    {{#if default_input}}
+      {{> templates/ui/default-input type="text" }}
+    {{/if}}
+    {{#if state_dropdown }} 
+      {{> templates/ui/state-dropdown states=@root.states}}
+    {{/if}}
+  </div>
+</div>
+{{/with}}
+{{/each}}

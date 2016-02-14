@@ -1,0 +1,8 @@
+<div class="dropdown">
+<select class="required" name="{{ lower_slug label }}">
+{{#each states}}
+<option value="{{ @key }}">{{ this }}</option>
+{{/each}}
+</select>
+<i class="icon-down-open"></i>
+</div>
